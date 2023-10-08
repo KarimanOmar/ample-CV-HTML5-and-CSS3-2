@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+
+        *{
+            font-family: "Julee";
+        }
+        @keyframes movingsection{
+           0%{
+            transform: translatex(-100px) ;
+           }
+        }
+        @keyframes personalphoto{
+           50%{
+            transform: translatex(20px) ;
+           }
+        }
+        @font-face {
+            font-family: "Julee";
+            src: url("../Julee/Julee-Regular.ttf");
+        }
+        meter::-webkit-meter-bar {
+            border-radius: 50%;
+            width: 250px;
+  height: 19px;
+            border-radius: 1px;
+  background: none; /* Required to get rid of the default background property */
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+meter::-webkit-meter-optimum-value {
+    background-color: #f86622;
+}
+
+
+        .ui-widgets {
+            position: relative;
+            display: inline-block;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 9rem;
+            margin: 1rem;
+            border: 1rem solid palegreen;
+            border-color: darkgreen;
+            border-bottom-color: rgb(245, 227, 227);
+            
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        #as{
+            border-color: rgb(0, 100, 95);
+            border-left-color: rgb(245, 227, 227);
+        }
+        #ps{
+            border-color: rgb(43, 0, 100);
+            border-right-color: rgb(245, 227, 227);
+        }
+        #css{
+            border-color: rgb(190, 93, 13);
+            border-top-color: rgb(245, 227, 227);
+            border-right-color: rgb(245, 227, 227);
+        }
+
+        .ui-widgets .ui-values {
+            top: 10px;
+            position: absolute;
+            left: 3px;
+            right: 0;
+            font-weight: 700;
+            font-size: 1.5rem;
+  
+        }
+
+
+        i{
+            font-size:20px;
+            color: rgb(31, 183, 221);
+        }
+        header{
+            
+            background-color: #f89422;
+            
+            text-align: center;
+        }
+
+        .left{
+            padding: 30px;
+            width: 50%;
+            float: left;
+            height: 100%;
+        }
+        p{
+            display: inline-block;
+        }
+        .section{
+            animation: movingsection 1s ease-in-out 1;
+        }
+        #perphoto{
+            animation: personalphoto 2s ease-in-out infinite;
+        }
+        .gallery{
+           
+            padding: 20px;
+            
+            text-align: center;
+        }
+        .imggallery{
+            width: 300px;
+            height: 200px;
+        }
+        .imggallery:hover{
+            transform: scale(1.07);
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span style="display: inline-block; padding-left: 300px;">
+            
+            <img id="perphoto" src="../images/girl.png" style="height:150px" >
+        </span>
+        <span style="display: inline-block;text-align: left; padding-left: 150px;color: white;">
+            <h1> Kariman Omar </h1>
+            <h3> Gis Web Dvelopment </h3>
+            <h4 style="width: 600px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </h4>
+        </span>
+    </header>
+    <div id="middlePart">
+        <section id="leftPart">
+            <section class="left">
+                <div style="padding-left: 30px;">
+                <h1 style="padding-left: 70px;font-size: xx-large;font-weight: 900;" onclick="playaudio()">Contact</h1>
+                <i class="fa-solid fa-map-location-dot"></i>&emsp;
+                <address style="display: inline-block;">123 Park Avenue,Michigen,ml</address><br><br>
+                <i class="fa-solid fa-calendar-days"></i>&emsp;
+                <time>11/12/1996</time><br><br>
+                <i class="fa-solid fa-phone"></i>&emsp;
+                <p>123 456 7899</p><br>
+                <i class="fa-solid fa-envelope"></i>&emsp;
+                <p>info@hioom.com</p><br>
+                <i class="fa-solid fa-link"></i>&emsp;
+                <p>www.hioom.com</p><br>
+            </div>
+            </section  >
+            <section class="left">
+                <h1 style="padding-left: 70px;font-size: xx-large;font-weight: 900;">Languages</h1>
+                <div style="padding-left: 30px;">
+                <label for="english">English</label><br>
+                <meter id="english" value="70" max="100"> 70% </meter><br>
+                <label for="gramar">Gramar</label><br>
+                <meter id="gramar" value="50" max="100"> 50% </meter><br>
+                <label for="arabic">Arabic</label><br>
+                <meter id="arabic" value="95" max="100"> 95% </meter><br>
+                </div>
+            </section>
+            <section class="left">
+                <h1 style="padding-left: 70px;font-size: xx-large;font-weight: 900;">Skills</h1>
+                <div style="padding-left: 30px;">
+                    <div class="container">
+                        <div id="ai"  class="ui-widgets">
+                            <div  class="ui-values">AI</div>
+                            
+                        </div>
+                        <div id="as" class="ui-widgets">
+                            <div class="ui-values">AS</div>
+                          
+                        </div>
+                        <div id="ps" class="ui-widgets">
+                            <div class="ui-values">PS</div>
+                           
+                        </div>
+                        <div id="css" class="ui-widgets">
+                            <div class="ui-values">CSS</div>
+                        
+                        </div>
+                    </div>
+                <!-- <label for="ai">AI</label><br>
+                <meter class="skills"  id="ai" value="70" max="100"> 70% </meter><br>
+                <label  for="ps">PS</label><br>
+                <meter class="skills"  id="ps" value="50" max="100"> 50% </meter><br>
+                <label for="as">AS</label><br>
+                <meter class="skills"  id="as" value="95" max="100"> 95% </meter><br>
+                <label for="css">CSS</label><br>
+                <meter class="skills"  id="css" value="30" max="100"> 30% </meter><br> -->
+                <h1 style="padding-left: 40px;font-size: xx-large;font-weight: 900;">Online Info</h1>
+                
+                <img src="../images/facebook.png" height="30px">
+                <p style="display: inline-block;"> Facebook  </p>
+                <samp style="padding-left: 30px;">
+                <img src="../images/google-plus.png " height="30px">
+                <p style="display: inline-block;"> Google  </p>
+            </samp>
+                </div>
+
+            </section>
+        </section> 
+            <section class="rghit">
+                <div class="section" style="padding-left: 30px;">
+                    <h1 style="background-color: #f89422;padding: 15px;display: inline-block;width: 40%;color: white;">Achievement</h1>
+                    <article>
+                        <span><h3>2010 Lorem Project</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Sint fuga consequuntur 
+                        sapiente et! Laborum unde assumenda tempora 
+                        culpa sint!
+                    </article>
+                    <article>
+                        <span><h3>2012 Vivamus Project</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.
+                    </article>
+                    <article>
+                        <span><h3>2015 Nunc project</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.
+                    </article>
+
+                </div>
+                <div class="section" style="padding-left: 30px;">
+                    <h1 style="background-color: #f89422;padding: 15px;display: inline-block;width: 40%;color: white;">Education</h1>
+                    <article>
+                        <span><h3>1997 - 2001 ABC School</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.
+                    </article>
+                    <article>
+                        <span><h3>2001 - 2004 onlie Universty</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. 
+                    </article>
+                    <article>
+                        <span><h3>2004 - 2006 ABC Studies</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.
+                    </article>
+
+                </div>
+                <div class="section" style="padding-left: 30px;">
+                    <h1 style="background-color: #f89422;padding: 15px;display: inline-block;width: 40%;color: white;">Work Experience</h1>
+                    <article>
+                        <span><h3>2010 - 2013 ABC Company</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. 
+                    </article>
+                    <article>
+                        <span><h3>2013 - 2015 Zoom Company</h3></span>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.
+                        
+                    </article>
+                </div>
+            </section>
+            <br>
+<footer style="clear: both;padding: 0;margin: 0;width: 100%;display: inline-block;">
+    <div style="display: inline-block;background-color: aquamarine;width: 33.3%;height: 44px;padding: 0px;margin-left: -4px;"></div>
+    <div style="display: inline-block;background-color: rgb(127, 146, 255);width: 33.3%;height: 44px;padding: 0px;margin-left: -4px;"></div>
+    <div style="display: inline-block;background-color: rgb(255, 127, 234);width: 33.3%;height: 44px;padding: 0px;margin-left: -4px;"></div>
+</footer>
+<audio  id="audio1">
+    <source  src="../audio/rain-on-roof.mp3">
+    <source  src="../audio/rain-on-roof.ogg">
+    <source  src="../audio/rain-on-roof.wav">
+</audio>
+<div style="background-image: url(../images/wallpaperbetter.jpg); background-size: cover; background-position: center; height: 500px; width: 100%; position: relative;">
+    <video controls autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+    
+    <source src="../vidoes/Swans - 1287.mp4">
+    <source src="../vidoes/Swans - 1287.webm">
+</video>
+</div>
+<div  class="gallery">
+<img class="imggallery" src="../images/wallpaperbetter.com_2560x1440 (1).jpg" >&emsp;
+<img class="imggallery" src="../images/wallpaperbetter.com_2560x1440 (2).jpg" >&emsp;
+<img class="imggallery" src="../images/wallpaperbetter.com_2560x1440 (7).jpg" >&emsp;
+<img class="imggallery" src="../images/wallpaperbetter.com_2560x1440.jpg" >&emsp;
+</div>
+
+
+
+<script>
+            var audio = document.getElementById("audio1")
+            // audio.play()
+ function playaudio(){
+    if (audio.paused) {
+        audio.play()
+
+            }
+            else {
+                audio.pause()
+            }
+ }
+</script>
+</body>
+</html>
